@@ -1,27 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Background -->
-    <color name="bg_primary">#1C1C1E</color>
-    <color name="bg_display">#1C1C1E</color>
+    <!-- Deep dark background with subtle blue tint (Flutter-style) -->
+    <color name="bg_primary">#0F1117</color>
+    <color name="bg_display">#0F1117</color>
+    <color name="bg_surface">#1A1D27</color>
 
     <!-- Display text -->
     <color name="display_text">#FFFFFF</color>
-    <color name="expression_text">#8E8E93</color>
-    <color name="error_red">#FF453A</color>
+    <color name="expression_text">#6B7280</color>
+    <color name="error_red">#FF5370</color>
 
-    <!-- Button backgrounds -->
-    <color name="btn_digit_bg">#2C2C2E</color>
-    <color name="btn_function_bg">#636366</color>
-    <color name="btn_operator_bg">#FF9F0A</color>
-    <color name="btn_equals_bg">#FF9F0A</color>
+    <!-- Digit buttons — elevated dark card look -->
+    <color name="btn_digit_bg">#1E2130</color>
+    <color name="btn_digit_text">#E8EAED</color>
+    <color name="btn_digit_ripple">#2D3148</color>
 
-    <!-- Button text -->
-    <color name="btn_digit_text">#FFFFFF</color>
-    <color name="btn_function_text">#FFFFFF</color>
+    <!-- Function buttons (C, +/-, %, ⌫) — muted indigo -->
+    <color name="btn_function_bg">#252840</color>
+    <color name="btn_function_text">#A5B4FC</color>
+    <color name="btn_function_ripple">#303560</color>
+
+    <!-- Operator buttons — vibrant indigo/violet gradient base -->
+    <color name="btn_operator_bg">#6C63FF</color>
     <color name="btn_operator_text">#FFFFFF</color>
-    <color name="btn_equals_text">#FFFFFF</color>
+    <color name="btn_operator_ripple">#8B85FF</color>
 
-    <!-- Ripple -->
-    <color name="btn_digit_ripple">#4D4D4D</color>
-    <color name="btn_operator_ripple">#FFB340</color>
+    <!-- Equals button — warm coral/pink gradient base -->
+    <color name="btn_equals_bg">#FF6B9D</color>
+    <color name="btn_equals_text">#FFFFFF</color>
+    <color name="btn_equals_ripple">#FF8FB5</color>
+
+    <!-- Gradient colors for drawables -->
+    <color name="operator_gradient_start">#6C63FF</color>
+    <color name="operator_gradient_end">#9C7BFF</color>
+    <color name="equals_gradient_start">#FF6B9D</color>
+    <color name="equals_gradient_end">#FF9A6C</color>
+    <color name="function_gradient_start">#252840</color>
+    <color name="function_gradient_end">#2E3355</color>
 </resources>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Tablet overrides -->
+<resources>
+    <dimen name="display_padding_horizontal">40dp</dimen>
+    <dimen name="display_padding_bottom">32dp</dimen>
+    <dimen name="text_display">88sp</dimen>
+    <dimen name="text_expression">22sp</dimen>
+    <dimen name="btn_text_size">36sp</dimen>
+    <dimen name="btn_corner_radius">24dp</dimen>
+    <dimen name="btn_margin">8dp</dimen>
+    <dimen name="btn_elevation">8dp</dimen>
+    <dimen name="grid_padding">16dp</dimen>
+</resources>
