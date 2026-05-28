@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    layout-land/activity_main.xml — Landscape layout
+    In landscape, display moves to the LEFT and buttons fill the RIGHT.
+    All button IDs are identical so MainActivity needs zero changes.
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_primary">
+
+    <!-- Display on the left (35% width) -->
+    <LinearLayout
+        android:id="@+id/displayContainer"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="bottom|end"
+        android:paddingHorizontal="@dimen/display_padding_horizontal"
+        android:paddingBottom="@dimen/display_padding_bottom"
+        android:background="@color/bg_display"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/buttonGrid"
+        app:layout_constraintWidth_percent="0.35">
+
+        <TextView
+            android:id="@+id/tvExpression"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="@color/expression_text"
+            android:textSize="14sp"
+            android:gravity="end"
+            android:maxLines="3"
+            android:ellipsize="start"
+            android:paddingBottom="4dp"/>
+
+        <TextView
+            android:id="@+id/tvDisplay"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textColor="@color/display_text"
+            android:textSize="40sp"
+            android:gravity="end"
+            android:maxLines="1"
+            android:ellipsize="start"/>
+    </LinearLayout>
+
+    <!-- Buttons on the right (65% width) -->
+    <GridLayout
+        android:id="@+id/buttonGrid"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:columnCount="4"
+        android:rowCount="5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@id/displayContainer"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Row 1 -->
+        <Button android:id="@+id/btnClear"        style="@style/CalcButton.Function" android:text="C"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnToggleSign"   style="@style/CalcButton.Function" android:text="+/-" android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnPercent"      style="@style/CalcButton.Function" android:text="%"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnDivide"       style="@style/CalcButton.Operator" android:text="÷"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <!-- Row 2 -->
+        <Button android:id="@+id/btn7"            style="@style/CalcButton.Digit"    android:text="7"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn8"            style="@style/CalcButton.Digit"    android:text="8"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn9"            style="@style/CalcButton.Digit"    android:text="9"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnMultiply"     style="@style/CalcButton.Operator" android:text="×"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <!-- Row 3 -->
+        <Button android:id="@+id/btn4"            style="@style/CalcButton.Digit"    android:text="4"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn5"            style="@style/CalcButton.Digit"    android:text="5"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn6"            style="@style/CalcButton.Digit"    android:text="6"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnSubtract"     style="@style/CalcButton.Operator" android:text="−"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <!-- Row 4 -->
+        <Button android:id="@+id/btn1"            style="@style/CalcButton.Digit"    android:text="1"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn2"            style="@style/CalcButton.Digit"    android:text="2"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn3"            style="@style/CalcButton.Digit"    android:text="3"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnAdd"          style="@style/CalcButton.Operator" android:text="+"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <!-- Row 5 -->
+        <Button android:id="@+id/btnBackspace"    style="@style/CalcButton.Function" android:text="⌫"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btn0"            style="@style/CalcButton.Digit"    android:text="0"   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnDecimal"      style="@style/CalcButton.Digit"    android:text="."   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+        <Button android:id="@+id/btnEquals"       style="@style/CalcButton.Equals"   android:text="="   android:layout_columnWeight="1" android:layout_rowWeight="1" android:layout_width="0dp" android:layout_height="0dp"/>
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

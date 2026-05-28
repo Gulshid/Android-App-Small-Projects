@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Default dimensions — phones (< sw600dp)
+    Override in values-sw600dp/ for tablets.
+-->
+<resources>
+    <dimen name="display_padding_horizontal">24dp</dimen>
+    <dimen name="display_padding_bottom">16dp</dimen>
+    <dimen name="text_display">64sp</dimen>
+    <dimen name="text_expression">16sp</dimen>
+    <dimen name="btn_text_size">28sp</dimen>
+    <dimen name="btn_corner_radius">4dp</dimen>
+    <dimen name="btn_margin">2dp</dimen>
+</resources>
+

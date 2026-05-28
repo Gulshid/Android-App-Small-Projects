@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    res/values/styles.xml
+    Three button style families:
+      CalcButton.Digit    — dark grey, white text
+      CalcButton.Function — mid grey, white text (C, +/-, %, ⌫)
+      CalcButton.Operator — orange, white text
+      CalcButton.Equals   — orange, white text
+-->
+<resources>
+
+    <style name="AppTheme" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/btn_operator_bg</item>
+        <item name="colorPrimaryVariant">@color/btn_operator_ripple</item>
+        <item name="colorOnPrimary">@color/btn_operator_text</item>
+        <item name="android:windowBackground">@color/bg_primary</item>
+    </style>
+
+    <!-- Base — shared by all calc buttons -->
+    <style name="CalcButton" parent="Widget.MaterialComponents.Button">
+        <item name="android:textSize">@dimen/btn_text_size</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="cornerRadius">@dimen/btn_corner_radius</item>
+        <item name="android:layout_margin">@dimen/btn_margin</item>
+        <item name="android:insetTop">0dp</item>
+        <item name="android:insetBottom">0dp</item>
+        <item name="android:letterSpacing">0</item>
+        <item name="elevation">0dp</item>
+        <item name="android:stateListAnimator">@null</item>
+    </style>
+
+    <style name="CalcButton.Digit" parent="CalcButton">
+        <item name="backgroundTint">@color/btn_digit_bg</item>
+        <item name="android:textColor">@color/btn_digit_text</item>
+        <item name="rippleColor">@color/btn_digit_ripple</item>
+    </style>
+
+    <style name="CalcButton.Function" parent="CalcButton">
+        <item name="backgroundTint">@color/btn_function_bg</item>
+        <item name="android:textColor">@color/btn_function_text</item>
+        <item name="rippleColor">@color/btn_digit_ripple</item>
+    </style>
+
+    <style name="CalcButton.Operator" parent="CalcButton">
+        <item name="backgroundTint">@color/btn_operator_bg</item>
+        <item name="android:textColor">@color/btn_operator_text</item>
+        <item name="rippleColor">@color/btn_operator_ripple</item>
+    </style>
+
+    <style name="CalcButton.Equals" parent="CalcButton">
+        <item name="backgroundTint">@color/btn_equals_bg</item>
+        <item name="android:textColor">@color/btn_equals_text</item>
+        <item name="rippleColor">@color/btn_operator_ripple</item>
+    </style>
+
+</resources>

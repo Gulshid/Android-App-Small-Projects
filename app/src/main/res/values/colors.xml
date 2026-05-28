@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Background -->
+    <color name="bg_primary">#1C1C1E</color>
+    <color name="bg_display">#1C1C1E</color>
+
+    <!-- Display text -->
+    <color name="display_text">#FFFFFF</color>
+    <color name="expression_text">#8E8E93</color>
+    <color name="error_red">#FF453A</color>
+
+    <!-- Button backgrounds -->
+    <color name="btn_digit_bg">#2C2C2E</color>
+    <color name="btn_function_bg">#636366</color>
+    <color name="btn_operator_bg">#FF9F0A</color>
+    <color name="btn_equals_bg">#FF9F0A</color>
+
+    <!-- Button text -->
+    <color name="btn_digit_text">#FFFFFF</color>
+    <color name="btn_function_text">#FFFFFF</color>
+    <color name="btn_operator_text">#FFFFFF</color>
+    <color name="btn_equals_text">#FFFFFF</color>
+
+    <!-- Ripple -->
+    <color name="btn_digit_ripple">#4D4D4D</color>
+    <color name="btn_operator_ripple">#FFB340</color>
+</resources>
